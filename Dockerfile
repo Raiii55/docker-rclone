@@ -2,6 +2,7 @@ ARG UBUNTU_VER=22.04
 
 FROM ghcr.io/by275/base:ubuntu AS prebuilt
 FROM ghcr.io/by275/base:ubuntu${UBUNTU_VER} AS base
+FROM linuxserver/jellyfin:latest
 
 # 
 # BUILD
