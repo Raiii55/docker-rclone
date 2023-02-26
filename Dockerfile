@@ -139,7 +139,6 @@ HEALTHCHECK --interval=30s --timeout=30s --start-period=10s --retries=3 \
 RUN rclone mount gdrive: /home/gdrive \
     --allow-other \
     --vfs-cache-mode full
-    --daemon
     --fast-list
     
 ENTRYPOINT ["/init"]
