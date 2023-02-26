@@ -136,9 +136,6 @@ VOLUME /config /cache /log /cloud /data /local
 HEALTHCHECK --interval=30s --timeout=30s --start-period=10s --retries=3 \
     CMD /usr/local/bin/healthcheck
 
-RUN rclone mount gdrive: /home/gdrive \
-    --allow-other \
-    --vfs-cache-mode full \
-    --fast-list \
-    
+RUN rclone mount gdrive: /home/gdrive --allow-other 
+
 ENTRYPOINT ["/init"]
